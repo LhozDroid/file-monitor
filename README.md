@@ -51,3 +51,7 @@ monitor.pause();
 monitor.unpause();
 monitor.stop();
 ```
+
+<a href="https://www.paypal.com/donate/?cmd=_donations&business=CSQRVLE2D43NU&item_name=Buy+me+a+beer!&currency_code=USD">
+  <strong>Buy me a beer!</strong>
+</a>
