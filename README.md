@@ -12,7 +12,7 @@ final FileMonitor monitor = new FileMonitorBuilder()//
 				.build();
 ```
 
-4- Add some listeners
+2- Add some listeners
 
 ```java
 monitor.add(listener);
