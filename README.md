@@ -1,51 +1,31 @@
 # Java File Monitor
 Simple Java file monitor.  Monitors file activity in the indicated paths, that's it...
 
-1- Create the configuration:
+1- Use the builder to create the file monitor object:
+
 ```java
-final FileMonitorConfig config = new FileMonitorConfig();
-config.setPaths(new String[] { "C:\\test" });
-config.setFileNameRegex(".*\\.txt");
-config.setInterval(500);
-config.setRecursive(false);
+final FileMonitor monitor = new FileMonitorBuilder()//
+				.withPaths("C:/test")//
+				.withInterval(500)//
+				.withRecursivity(false)//
+				.withFileNameRegex(".*\\.txt")//
+				.build();
 ```
 
-2- Implement your listener:
+4- Add some listeners
+
 ```java
-final FileMonitorListener listener = new FileMonitorListener() {
-  @Override
-  public void onFileChange(final FileMonitorEvent event) {
-    App.LOG.info("File changed");
-  }
-
-  @Override
-  public void onFileCreate(final FileMonitorEvent event) {
-    App.LOG.info("File created");
-  }
-
-  @Override
-  public void onFileDelete(final FileMonitorEvent event) {
-    App.LOG.info("File deleted");
-  }
-
-  @Override
-  public void onStart() {
-    App.LOG.info("Started");
-  }
-
-  @Override
-  public void onStop() {
-    App.LOG.info("Stopped");
-  }
-};
+monitor.add(listener);
 ```
 
-3- Start monitoring:
+3- Start the monitor:
+
 ```java
-FileMonitor monitor = new FileMonitor(config);
+monitor.start();
 ```
 
 You can also do this:
+
 ```java
 monitor.pause();
 monitor.unpause();
