@@ -1,9 +1,9 @@
 /**
  *
  */
-package dev.lhoz.monitor.fm;
+package com.github.lhoz.monitor.file;
 
-import dev.lhoz.monitor.fm.model.FileMonitorEvent;
+import com.github.lhoz.monitor.file.model.FileMonitorEvent;
 
 /**
  * @author Lhoz

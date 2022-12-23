@@ -1,7 +1,7 @@
 /**
  *
  */
-package dev.lhoz.monitor.fm.model;
+package com.github.lhoz.monitor.file.model;
 
 import java.io.File;
 

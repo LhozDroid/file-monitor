@@ -1,14 +1,14 @@
 /**
  *
  */
-package dev.lhoz.monitor.fm;
+package com.github.lhoz.monitor.file;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import dev.lhoz.monitor.fm.model.FileMonitorEvent;
-import dev.lhoz.monitor.fm.model.FileMonitorRecord;
+import com.github.lhoz.monitor.file.model.FileMonitorEvent;
+import com.github.lhoz.monitor.file.model.FileMonitorRecord;
 
 /**
  * @author Lhoz

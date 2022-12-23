@@ -1,7 +1,7 @@
 /**
  *
  */
-package dev.lhoz.monitor.fm;
+package com.github.lhoz.monitor.file;
 
 import java.io.File;
 import java.util.Arrays;
@@ -9,7 +9,8 @@ import java.util.concurrent.atomic.AtomicReference;
 
 import org.apache.commons.io.FileUtils;
 
-import dev.lhoz.monitor.fm.exception.InvalidPathException;
+import com.github.lhoz.monitor.file.exception.InvalidPathException;
+
 import lombok.extern.log4j.Log4j2;
 
 /**

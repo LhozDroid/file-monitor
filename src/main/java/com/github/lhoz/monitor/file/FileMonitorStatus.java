@@ -1,7 +1,7 @@
 /**
  *
  */
-package dev.lhoz.monitor.fm;
+package com.github.lhoz.monitor.file;
 
 /**
  * @author Lhoz

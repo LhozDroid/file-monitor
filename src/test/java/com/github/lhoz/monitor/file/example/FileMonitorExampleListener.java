@@ -1,10 +1,11 @@
 /**
  *
  */
-package dev.lhoz.monitor.fm.example;
+package com.github.lhoz.monitor.file.example;
 
-import dev.lhoz.monitor.fm.FileMonitorListener;
-import dev.lhoz.monitor.fm.model.FileMonitorEvent;
+import com.github.lhoz.monitor.file.FileMonitorListener;
+import com.github.lhoz.monitor.file.model.FileMonitorEvent;
+
 import lombok.extern.log4j.Log4j2;
 
 /**

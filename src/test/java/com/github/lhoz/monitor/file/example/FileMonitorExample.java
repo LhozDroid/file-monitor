@@ -1,11 +1,11 @@
 /**
  *
  */
-package dev.lhoz.monitor.fm.example;
+package com.github.lhoz.monitor.file.example;
 
-import dev.lhoz.monitor.fm.FileMonitor;
-import dev.lhoz.monitor.fm.FileMonitorBuilder;
-import dev.lhoz.monitor.fm.exception.InvalidPathException;
+import com.github.lhoz.monitor.file.FileMonitor;
+import com.github.lhoz.monitor.file.FileMonitorBuilder;
+import com.github.lhoz.monitor.file.exception.InvalidPathException;
 
 /**
  * @author Lhoz

@@ -1,7 +1,7 @@
 /**
  *
  */
-package dev.lhoz.monitor.fm.exception;
+package com.github.lhoz.monitor.file.exception;
 
 /**
  * @author Lhoz

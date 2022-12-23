@@ -1,7 +1,7 @@
 /**
  *
  */
-package dev.lhoz.monitor.fm;
+package com.github.lhoz.monitor.file;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -22,8 +22,9 @@ import org.apache.commons.io.filefilter.IOFileFilter;
 import org.apache.commons.io.filefilter.RegexFileFilter;
 import org.apache.commons.io.filefilter.TrueFileFilter;
 
-import dev.lhoz.monitor.fm.model.FileMonitorConfig;
-import dev.lhoz.monitor.fm.model.FileMonitorRecord;
+import com.github.lhoz.monitor.file.model.FileMonitorConfig;
+import com.github.lhoz.monitor.file.model.FileMonitorRecord;
+
 import lombok.extern.log4j.Log4j2;
 
 /**
