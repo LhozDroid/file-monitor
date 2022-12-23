@@ -4,18 +4,34 @@
 
 	<groupId>com.vicr.cim.monitor</groupId>
 	<artifactId>file-monitor</artifactId>
-	<version>22121915</version>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
 	<name>file-monitor</name>
+	<description>File monitor basic library</description>
+	<url>https://github.com/LhozDroid/file-monitor</url>
+
+	<licenses>
+		<license>
+			<name>MIT</name>
+			<url>https://opensource.org/licenses/MIT</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	
+	<scm>
+		<url>https://github.com/LhozDroid/file-monitor.git</url>
+	</scm>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 
-		<version.commons-lang3>3.12.0</version.commons-lang3>
-		<version.commons-io>2.11.0</version.commons-io>
-		<version.lombok>1.18.24</version.lombok>
-		<version.log4j>2.19.0</version.log4j>
+		<commons-lang3.version>3.12.0</commons-lang3.version>
+		<commons-io.version>2.11.0</commons-io.version>
+		<lombok.version>1.18.24</lombok.version>
+		<log4j.version>2.19.0</log4j.version>
 	</properties>
 
 	<dependencies>
@@ -23,19 +39,19 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>${version.commons-lang3}</version>
+			<version>${commons-lang3.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
-			<version>${version.commons-io}</version>
+			<version>${commons-io.version}</version>
 		</dependency>
 
 		<!-- Lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>${version.lombok}</version>
+			<version>${lombok.version}</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -43,12 +59,12 @@
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
-			<version>${version.log4j}</version>
+			<version>${log4j.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
-			<version>${version.log4j}</version>
+			<version>${log4j.version}</version>
 		</dependency>
 	</dependencies>
 </project>
