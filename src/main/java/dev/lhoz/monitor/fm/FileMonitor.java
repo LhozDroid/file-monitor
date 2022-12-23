@@ -10,7 +10,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 
@@ -30,6 +32,8 @@ import lombok.extern.log4j.Log4j2;
  */
 @Log4j2
 public class FileMonitor {
+	private ExecutorService executor;
+
 	private final FileMonitorObserver observer = new FileMonitorObserver();
 
 	private final Map<String, FileMonitorRecord> records = Collections.synchronizedMap(new HashMap<String, FileMonitorRecord>());
@@ -77,8 +81,9 @@ public class FileMonitor {
 	 *
 	 */
 	public void start() {
-		if (FileMonitorStatus.INACTIVE.equals(this.status.get())) {
-			Executors.newSingleThreadExecutor().execute(() -> {
+		if (FileMonitorStatus.INACTIVE.equals(this.status.get()) && this.executor == null) {
+			this.executor = Executors.newSingleThreadExecutor();
+			this.executor.execute(() -> {
 				this.status.set(FileMonitorStatus.ACTIVE);
 
 				// Does the initial scan
@@ -129,6 +134,15 @@ public class FileMonitor {
 	 */
 	public void stop() {
 		this.status.set(FileMonitorStatus.INACTIVE);
+		this.executor.shutdown();
+
+		try {
+			this.executor.awaitTermination(this.config.getInterval(), TimeUnit.MILLISECONDS);
+		} catch (final Exception e) {
+			FileMonitor.LOG.debug(e.getLocalizedMessage(), e);
+		}
+
+		this.executor = null;
 	}
 
 	/**
@@ -165,7 +179,7 @@ public class FileMonitor {
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	private void sleep() {
 		try {
